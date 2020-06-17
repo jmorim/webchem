@@ -1,14 +1,12 @@
 #' Scrape \url{thegoodsscentscompany.com} for aromas of compounds
 #'
-#' @import xml2
-#' @import rvest
+#' @import xml2 rvest
 #'
 #' @param CAS character; CAS number to search by. See \code{\link{is.cas}} for
 #' correct formatting.
 #' @param odor logical; TRUE by default, if TRUE, returns odor data from web
 #' @param flavor logical; FALSE by default, if TRUE, returns flavor data from
 #' web
-#' @param ... Currently not used
 #'
 #' @return Returns a list of character vectors the found odors and/or flavors
 #' or an NA if not found.
@@ -25,14 +23,13 @@
 
 tgsc_percept <- function(CAS,
                         odor = TRUE,
-                        flavor = FALSE,
-                        ...) {
+                        flavor = FALSE) {
   foo <- function(CAS, odor, flavor) {
     # Base url for goodscents
     search.url <- 'http://www.thegoodscentscompany.com/search3.php?qName='
     if (!is.na(CAS)) {
       # Paste CAS into url and read that page
-      stink.html <- read_html(paste0(search.url, CAS)) #%>%
+      stink.html <- xml2::read_html(paste0(search.url, CAS)) #%>%
       # Find the relevant data block in the page
       stink.block <- html_nodes(stink.html, '.lstw11') #%>%
       # Read text
