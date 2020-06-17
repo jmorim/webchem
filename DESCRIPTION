@@ -18,9 +18,11 @@ Authors@R: c(person("Eduard", "Szöcs", role = "aut"),
     person("Johannes", "Ranke", role = "ctb"),
     person("Andreas", "Scharmüller", role = "ctb"),        
     person("Eric R", "Scott", role = "ctb"),
+    person("Josh", "Morimoto", role = 'ctb'),
     person("Jan", "Stanstrup", role = "ctb"),
     person("Gordon", "Getzinger", role = "ctb"),
-    person("Tamás", "Stirling", email = "stirling.tamas@gmail.com", role = c("ctb", "cre")))
+    person("Tamás", "Stirling", email = "stirling.tamas@gmail.com", role =
+c("ctb", "cre")))
 Maintainer: Tamás Stirling <stirling.tamas@gmail.com>
 LazyLoad: yes
 LazyData: yes

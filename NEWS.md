@@ -3,6 +3,7 @@
 ## NEW FEATURES
 
 * Download images of substances from ChemSpider with cs_img()
+* Retrieve odors and flavors from The Good Scents Company (http://www.thegoodscentscompany.com) with tgsc_percept()
 
 # webchem 1.0.0
 
