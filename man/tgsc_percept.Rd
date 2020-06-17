@@ -4,7 +4,7 @@
 \alias{tgsc_percept}
 \title{Scrape \url{thegoodsscentscompany.com} for aromas of compounds}
 \usage{
-tgsc_percept(CAS, odor = TRUE, flavor = FALSE, ...)
+tgsc_percept(CAS, odor = TRUE, flavor = FALSE)
 }
 \arguments{
 \item{CAS}{character; CAS number to search by. See \code{\link{is.cas}} for
@@ -12,9 +12,8 @@ correct formatting.}
 
 \item{odor}{logical; TRUE by default, if TRUE, returns odor data from web}
 
-\item{flavor}{logical; FALSE by default, if TRUE, returns flavor data from web}
-
-\item{...}{Currently not used}
+\item{flavor}{logical; FALSE by default, if TRUE, returns flavor data from
+web}
 }
 \value{
 Returns a list of character vectors the found odors and/or flavors
